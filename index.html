@@ -110,7 +110,7 @@
 
       <!-- Only countable stats: each number can be checked on this page (script.js recounts them from the DOM) -->
       <ul class="stats" aria-label="Quick facts you can count on this page">
-        <li class="stat reveal"><strong data-count="projects">8</strong><span>projects &amp; demos on this page</span></li>
+        <li class="stat reveal"><strong data-count="projects">11</strong><span>projects &amp; demos on this page</span></li>
         <li class="stat reveal"><strong data-count="demos">2</strong><span>working QR-ordering demos</span></li>
         <li class="stat reveal"><strong data-count="tools">3</strong><span>core tools: React · Node.js · Python</span></li>
       </ul>
@@ -125,12 +125,12 @@
     <header class="sec-head reveal">
       <p class="chapter"><b>02</b> Work</p>
       <h2 id="projTitle" class="brush sec-title">Featured <span>Projects</span></h2>
-      <p class="sec-sub">Some of the things I've built. Screenshots are real; the cafe and restaurant demos are fictional sample businesses with sample prices.</p>
+      <p class="sec-sub">Some of the things I've built. Screenshots are real; the cafe and restaurant demos are fictional sample businesses with sample prices. The AI projects run locally; DocQ and LeadAgent use sample documents and websites I wrote myself.</p>
     </header>
 
     <div class="chips reveal" role="group" aria-label="Filter projects">
-      <button class="chip is-active" type="button" data-filter="all" aria-pressed="true">All <span data-chip-count="all">8</span></button>
-      <button class="chip" type="button" data-filter="ai" aria-pressed="false">AI &amp; tools <span data-chip-count="ai">3</span></button>
+      <button class="chip is-active" type="button" data-filter="all" aria-pressed="true">All <span data-chip-count="all">11</span></button>
+      <button class="chip" type="button" data-filter="ai" aria-pressed="false">AI &amp; tools <span data-chip-count="ai">6</span></button>
       <button class="chip" type="button" data-filter="web" aria-pressed="false">Web <span data-chip-count="web">3</span></button>
       <button class="chip" type="button" data-filter="local" aria-pressed="false">Local business <span data-chip-count="local">2</span></button>
     </div>
@@ -237,6 +237,40 @@
           <ul class="tags" aria-label="Type"><li>Portfolio site</li><li>Creator</li></ul>
           <p>A scrapbook-style portfolio for a lifestyle creator, with photo collage, film-strip details and social links.</p>
           <a class="card__link" href="https://mau-portfolio-one.vercel.app" target="_blank" rel="noopener">Visit live site<span class="sr-only"> (opens in a new tab)</span> <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+
+      <!-- NOTE: the GitHub repos below are placeholders; they have not been created yet (see ai-projects/*/README.md; delta, docq and leadagent). -->
+      <article class="card reveal" data-cat="ai">
+        <div class="card__media"><img src="assets/img/proj-docq.webp" width="1000" height="625" alt="DocQ app: a question about incident reporting answered with a page citation and the retrieved passages" loading="lazy"></div>
+        <div class="card__body">
+          <p class="card__num">09</p>
+          <h3>DocQ: Document Q&amp;A (RAG)</h3>
+          <ul class="tags" aria-label="Tech used"><li>Python</li><li>FastAPI</li><li>MiniLM embeddings</li><li>FAISS</li><li>BM25</li></ul>
+          <p>Upload PDFs and ask questions. Every answer cites the document and page it came from. Hybrid search, extractive answers, with an optional LLM you plug in. Measured on my test set of 25 questions over sample documents I wrote: right page in the top 3 for 24 of 25, answer cited the right page for 24 of 25.</p>
+          <a class="card__link" href="https://github.com/praneetkamble/docq" target="_blank" rel="noopener">View code on GitHub<span class="sr-only"> (opens in a new tab)</span> <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+
+      <article class="card reveal" data-cat="ai">
+        <div class="card__media"><img src="assets/img/proj-leadagent.webp" width="1000" height="625" alt="LeadAgent dashboard: a business scored 95 out of 100 with a rubric, a step-by-step trace and a pitch draft waiting for approval" loading="lazy"></div>
+        <div class="card__body">
+          <p class="card__num">10</p>
+          <h3>LeadAgent: Agent with human approval</h3>
+          <ul class="tags" aria-label="Tech used"><li>Python</li><li>FastAPI</li><li>Agent pipeline</li><li>Human-in-the-loop</li></ul>
+          <p>Reads a business website, extracts facts, scores fit on a transparent 100-point rubric, drafts a pitch and then stops until a person approves, edits or rejects it. Nothing is sent automatically. Rule-based by default, optional LLM. Shown on 6 fictional sample sites, with 19 automated tests.</p>
+          <a class="card__link" href="https://github.com/praneetkamble/leadagent" target="_blank" rel="noopener">View code on GitHub<span class="sr-only"> (opens in a new tab)</span> <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+
+      <article class="card reveal" data-cat="ai">
+        <div class="card__media"><img src="assets/img/proj-delta.webp" width="1000" height="625" alt="Delta OS dashboard: a glowing central core with a Talk to Delta input, live system gauges, active modules, today's tasks and quick-action buttons, labelled as a simulated demo PC" loading="lazy"></div>
+        <div class="card__body">
+          <p class="card__num">11</p>
+          <h3>Delta: Personal PC assistant</h3>
+          <ul class="tags" aria-label="Tech used"><li>Python</li><li>FastAPI</li><li>Tool calling</li><li>Safety model</li></ul>
+          <p>A local assistant for a Windows PC: apps, volume, files, reminders, notes and more, by typing or voice. Every action passes one gate that decides safe, ask first or blocked, keeps an audit log and keeps file access inside chosen folders. Works offline, with an optional LLM you plug in. Now with a dashboard that shows live vitals, tasks, activity and safety state next to the chat. Built so far on Linux with a mock adapter, so the numbers in the screenshot are simulated demo values (439 automated test cases passing). The real Windows adapter is written but not yet tested on a Windows PC.</p>
+          <a class="card__link" href="https://github.com/praneetkamble/delta" target="_blank" rel="noopener">View code on GitHub<span class="sr-only"> (opens in a new tab)</span> <span aria-hidden="true">↗</span></a>
         </div>
       </article>
     </div>

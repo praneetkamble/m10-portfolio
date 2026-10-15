@@ -25,3 +25,29 @@ Run locally: `python3 -m http.server 8080` in this folder, open http://localhost
 ## TODO before publishing
 - Replace the "Case studies" note when a client agrees to be named.
 - Optional: swap assets/art/*.webp for higher-detail artwork (keep filenames and aspect ratios).
+
+---
+## v4b changes (AI projects added)
+- Two new project cards (09 DocQ, 10 LeadAgent) in the AI & tools filter; stat and chip counters now read 10 / 5 (script.js recounts them from the page).
+- Card thumbnails are real screenshots of the running apps (`assets/img/proj-docq.webp`, `proj-leadagent.webp`).
+- Source links point to `https://github.com/praneetkamble/docq` and `/leadagent`. **These repos have not been created yet**, so the links 404 until they are.
+- Metrics on the cards are only the ones measured by `ai-projects/docq/eval/run_eval.py` (25-question test set, author-written sample docs).
+- Contact details unchanged from v4. Verification screenshots: `screens-new/`.
+
+---
+## v4c changes (Delta added)
+- New project card 11, "Delta: Personal PC assistant", in the AI & tools filter. Stat and chip counters now read 11 / 6 (script.js recounts them from the page; Web 3 and Local business 2 are unchanged).
+- Thumbnail `assets/img/proj-delta.webp` is a crop of a real screenshot of the running Delta UI (mock adapter, headless Chrome on Linux).
+- The card says only what is measured: 375 pytest cases passing on Linux with a mock adapter. It does **not** claim Windows testing, user counts or any other number.
+- Link `https://github.com/praneetkamble/delta` is a placeholder: **the repo has not been created yet**, so the link 404s until it is.
+- Section sub-text now says "The AI projects" instead of "The two AI projects". Contact details unchanged.
+- Verification screenshots: `screens-v4c/` (not shipped in the zip).
+
+---
+## v4d changes (Delta OS dashboard)
+- Copied from v4c; v4c is untouched.
+- Card 11 thumbnail `assets/img/proj-delta.webp` is now a downscaled (1000x625) screenshot of the new Delta OS dashboard, taken from the running app in demo mode (mock adapter, headless Chrome on Linux). The values in it are simulated and the card text says so.
+- Card 11 text now says 439 pytest cases passing (was 375) and mentions the dashboard. Windows is still stated as untested.
+- GitHub link is still a placeholder; the repo has not been created.
+- Not shipped in the zip: `screens*/`, `_src/`, `*.mp4`.
+
